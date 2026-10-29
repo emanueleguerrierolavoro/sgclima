@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SG CLIMA - Arredo bagno e ristrutturazioni</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Jost:wght@200;300;400;500;600&display=swap">
+<style>
+:root{--ink:#0F1113;--ink2:#1A1D20;--paper:#F6F4F0;--line:#DDD8CF;--muted:#6A6F73;--green:#1F8A4C}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Jost,Poppins,Arial,sans-serif;font-weight:300;margin:0;letter-spacing:-.02em;line-height:1.04}
+a{color:inherit}
+.w{max-width:1240px;margin:0 auto;padding:0 40px}
+.eyebrow{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;font-weight:500}
+/* prima riga bianca */
+.top{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #ECE9E3}
+.top .w{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo img{height:42px;width:auto;display:block}
+.logo{display:flex;align-items:center}
+.btn{display:inline-block;text-decoration:none;font-weight:500;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;padding:16px 28px;border-radius:2px;white-space:nowrap}
+.btn.g{background:var(--green);color:#fff}
+.btn.w1{background:#fff;color:var(--ink)}
+.btn.line{border:1px solid rgba(255,255,255,.55);color:#fff}
+.top .btn{padding:13px 22px}
+/* hero con due foto */
+.hero{position:relative;height:calc(100vh - 77px);min-height:620px;max-height:900px;display:grid;grid-template-columns:1.5fr 1fr;gap:6px;background:#fff;color:#fff}
+.ph{position:relative;background-size:cover;background-position:center;overflow:hidden}
+.ph.p1{background-image:url(img/bagno1.jpg)}
+.ph.p2{background-image:url(img/bagno2.jpg);background-position:center 40%}
+.ph.p1:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,9,10,.88) 0%,rgba(8,9,10,.5) 45%,rgba(8,9,10,0) 78%)}
+.ph .tx{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:0 40px 56px max(40px,calc((100vw - 1240px)/2 + 40px))}
+.hero h1{font-size:clamp(2.8rem,5.4vw,5.2rem);margin:18px 0 16px}
+.hero p{font-size:1.15rem;color:#E3E4E5;margin:0 0 30px}
+.hero .az{display:flex;gap:14px;flex-wrap:wrap}
+/* materiali */
+.sec{padding:120px 0}
+.sec h2{font-size:clamp(2.4rem,4.6vw,4rem);margin:18px 0 0;max-width:14em}
+.sec .lead{color:var(--muted);font-size:1.12rem;max-width:34em;margin:22px 0 0}
+.mat{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:64px}
+.pn{position:relative;min-height:380px;color:#fff;background-size:cover;background-position:center;overflow:hidden;display:flex;align-items:flex-end}
+.pn:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.62),rgba(0,0,0,0) 62%)}
+.pn.l:after{background:linear-gradient(0deg,rgba(255,255,255,.88),rgba(255,255,255,0) 62%)}
+.pn .t{position:relative;z-index:1;padding:28px}
+.pn.l{color:var(--ink)}
+.pn .n{font-size:.74rem;letter-spacing:.22em;opacity:.8}
+.pn h3{font-size:1.9rem;margin:8px 0 6px}
+.pn p{margin:0;font-size:.97rem;opacity:.92;max-width:26em}
+.a{grid-column:span 7;min-height:520px}.b{grid-column:span 5;min-height:520px}.c{grid-column:span 5}.d{grid-column:span 7}
+/* come lavoriamo */
+.dark{background:var(--ink);color:#fff}
+.dark .lead{color:#A7ACAF}
+.pas{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:68px;border-top:1px solid rgba(255,255,255,.2)}
+.pas div{padding:30px 28px 10px 0}
+.pas .nn{font-family:Jost,Poppins,sans-serif;font-weight:200;font-size:4.4rem;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.55)}
+.pas h3{font-size:1.5rem;font-weight:400;margin:20px 0 8px}
+.pas p{margin:0;color:#A7ACAF;font-size:.97rem}
+/* prenota */
+.pren{position:relative;background:#EFEDE8 url(img/marmo-bianco.jpg) center/cover}
+.pren:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.72),rgba(255,255,255,.1))}
+.pren .g{position:relative;display:grid;grid-template-columns:1fr 1.05fr;gap:72px;align-items:center}
+.pren .g{padding-left:40px;padding-right:40px}
+.pren ul{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:14px}
+.pren li{display:flex;gap:14px;align-items:center;font-size:1.02rem}
+.pren li:before{content:"";width:28px;height:1px;background:var(--ink)}
+.card{background:#fff;padding:40px;box-shadow:0 30px 80px rgba(15,17,19,.18)}
+label,.lab{display:block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;margin:0 0 10px;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.chips button{font:inherit;font-size:.92rem;color:var(--ink);background:#fff;border:1px solid #CFCAC1;padding:11px 15px;cursor:pointer;min-height:44px;border-radius:0}
+.chips button:hover{border-color:var(--ink)}
+.chips button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.stato{color:var(--muted);font-size:.95rem;margin:0 0 14px}
+.riep{background:var(--paper);border-left:3px solid var(--green);padding:12px 14px;margin:0 0 18px;font-size:.95rem}
+.campi{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.campi .full{grid-column:1/-1}
+input[type=text],input[type=email],input[type=tel]{width:100%;font:inherit;font-size:.98rem;padding:14px 15px;border:1px solid #CFCAC1;border-radius:0;background:#fff;color:var(--ink)}
+input::placeholder{color:#8A8F93}
+input:focus,button:focus-visible,a:focus-visible{outline:3px solid #7FD6CC;outline-offset:1px}
+.consenso{display:flex;gap:11px;align-items:flex-start;font-size:.86rem;letter-spacing:0;text-transform:none;font-weight:400;color:var(--muted);margin:6px 0 18px;line-height:1.45}
+.consenso input{margin-top:3px;width:18px;height:18px;flex:none}
+.trappola{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.err{color:#A32A1F;font-weight:600;font-size:.92rem;margin:0 0 14px}
+.card .btn{display:block;text-align:center;width:100%;border:0;cursor:pointer;font-family:inherit}
+.card .btn:disabled{opacity:.55;cursor:wait}
+.nota{font-size:.82rem;color:var(--muted);margin:14px 0 0}
+.nascosto{display:none}
+.ok{padding:10px 0}
+.ok h3{font-size:2rem;margin:0 0 12px}
+.ok p{margin:0 0 10px}
+/* contatti */
+.cont{background:var(--ink2);color:#fff;padding:96px 0 80px}
+.cont h2{font-size:clamp(2.2rem,4vw,3.4rem);margin-bottom:44px}
+.cont .g{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:56px;border-top:1px solid rgba(255,255,255,.2);padding-top:44px}
+.cont h3{font-family:Inter,sans-serif;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;color:#9AA0A4;margin-bottom:16px}
+.cont p{margin:0 0 8px;color:#DADCDD}
+.ind{font-family:Jost,Poppins,sans-serif;font-weight:300;font-size:1.45rem;line-height:1.2;text-decoration:none;color:#fff;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:3px}
+.tel{color:#fff;text-decoration:none;font-size:1.05rem}
+.tel:hover{text-decoration:underline}
+.ind:hover{border-color:#fff}
+.ora{display:flex;justify-content:space-between;max-width:300px;color:#C7CACC;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.ora b{font-weight:500;color:#fff}
+.mappa{position:relative;min-height:300px;background:#2A2E31}
+.mappa iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) contrast(1.05) brightness(.92)}
+.mappa .apri{position:absolute;left:12px;bottom:12px;background:#fff;color:var(--ink);text-decoration:none;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:10px 14px}
+.fo{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer{background:#0A0B0C;color:#7E8387;font-size:.82rem;padding:24px 0}
+.marker{font-size:.7rem;background:#FFF4D6;color:#6B5200;padding:2px 7px;margin-left:8px;font-weight:500;letter-spacing:.02em}
+@media(max-width:900px){
+.w{padding:0 22px}
+.top .w{height:68px;gap:10px}.logo img{height:30px}.top .btn{padding:10px 11px;font-size:.62rem;letter-spacing:.06em}.hero{grid-template-columns:1fr;grid-template-rows:76vh 62vw;height:auto;min-height:0;max-height:none}.ph .tx{padding:0 22px 34px}.hero p{font-size:1rem}
+.sec{padding:76px 0}
+.mat{grid-template-columns:1fr}.a,.b,.c,.d{grid-column:auto;min-height:340px}
+.pas{grid-template-columns:1fr 1fr}
+.pren .g,.cont .g{grid-template-columns:minmax(0,1fr);gap:36px}
+.mappa{min-height:260px}
+.card{padding:26px}
+.pren .g{padding-left:22px;padding-right:22px}
+.campi{grid-template-columns:1fr}
+}
+@media(max-width:520px){.pas{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="w">
+<a class="logo" href="#" aria-label="SG CLIMA - Arredo bagno"><img src="img/logo-SG-CLIMA.svg" alt="SG CLIMA - Arredo bagno"></a>
+<a class="btn g" href="#prenota">Richiedi appuntamento</a>
+</div></div>
+
+<div class="hero">
+<div class="ph p1" role="img" aria-label="Bagno moderno con rivestimenti in marmo e doccia in vetro">
+<div class="tx">
+<span class="eyebrow">Arredo bagno &middot; Ristrutturazioni</span>
+<h1>Oltre 25 anni di esperienza.</h1>
+<p>Via Salvatore Pescatori, Avellino</p>
+<div class="az"><a class="btn w1" href="#prenota">Richiedi appuntamento</a><a class="btn line" href="#dove">Dove siamo</a></div>
+</div>
+</div>
+<div class="ph p2" role="img" aria-label="Bagno con mobile doppio lavabo in marmo e pannelli in legno illuminati"></div>
+</div>
+
+<section class="pren" id="prenota"><div class="w sec g">
+<div>
+<span class="eyebrow">Richiedi appuntamento</span>
+<h2 style="font-size:clamp(2.4rem,4.4vw,3.8rem);margin-top:18px">Prenota un appuntamento.</h2>
+<ul><li>Totalmente gratuito e senza impegno</li><li>Conferma immediata, anche fuori orario</li><li>Puoi annullare o spostare con un clic</li></ul>
+</div>
+<div class="card">
+<div id="inattivo" class="nascosto"><p class="lab">Prenotazione online in arrivo</p><p>Per ora chiamaci al <a href="tel:+393347404502">+39 334 740 4502</a> o scrivi a <a href="mailto:guerrierosg@gmail.com">guerrierosg@gmail.com</a>.</p></div>
+<div id="app">
+<span class="lab">1 &middot; Scegli il giorno</span>
+<p class="stato" id="statoGiorni">Cerco i giorni disponibili...</p>
+<div class="chips" id="giorni"></div>
+<div id="sOra" class="nascosto"><span class="lab">2 &middot; Scegli l'orario</span><div class="chips" id="orari"></div></div>
+<form id="modulo" class="nascosto" novalidate>
+<span class="lab">3 &middot; I tuoi dati</span>
+<p class="riep" id="riepilogo"></p>
+<div class="campi">
+<input type="text" id="nome" placeholder="Nome e cognome" autocomplete="name" maxlength="80" aria-label="Nome e cognome" class="full" required>
+<input type="tel" id="tel" placeholder="Telefono" autocomplete="tel" maxlength="25" aria-label="Telefono">
+<input type="email" id="email" placeholder="Email" autocomplete="email" maxlength="120" aria-label="Email" required>
+</div>
+<div class="trappola" aria-hidden="true"><label for="sito">Non compilare questo campo</label><input type="text" id="sito" tabindex="-1" autocomplete="off"></div>
+<label class="consenso"><input type="checkbox" id="consenso"><span>Ho letto l'<a href="privacy.html" target="_blank" rel="noopener">informativa sulla privacy</a> e acconsento al trattamento dei miei dati per gestire questo appuntamento.</span></label>
+<p class="err nascosto" id="errore" role="alert"></p>
+<button type="submit" class="btn g" id="invia">Conferma la prenotazione</button>
+<p class="nota">Ogni appuntamento dura 45 minuti. Riceverai una email di conferma: controlla anche nella cartella Spam.</p>
+</form>
+</div>
+<div id="fatto" class="ok nascosto" role="status" tabindex="-1">
+<h3>Appuntamento confermato</h3>
+<p id="fattoTesto"></p>
+<p><b>Ti abbiamo scritto una email di conferma.</b> Se non la vedi, controlla anche nella cartella <b>Spam</b> (posta indesiderata).</p>
+<p>Ti aspettiamo in Via Salvatore Pescatori, 67, Avellino.</p>
+</div>
+</div></section>
+
+<section class="cont" id="dove"><div class="w">
+<h2>Passa a trovarci.</h2>
+<div class="g">
+<div>
+<h3>Dove siamo</h3>
+<p><a class="ind" href="https://www.google.com/maps/search/?api=1&query=Via+Salvatore+Pescatori+67+83100+Avellino+AV" target="_blank" rel="noopener">Via Salvatore Pescatori, 67<br>83100 Avellino AV</a></p>
+<p style="margin-top:22px"><a class="btn w1" href="https://www.google.com/maps/dir/?api=1&destination=Via+Salvatore+Pescatori+67+83100+Avellino+AV" target="_blank" rel="noopener">Indicazioni stradali</a></p>
+<h3 style="margin-top:40px">Contatti</h3>
+<p><a class="tel" href="tel:+393347404502">+39 334 740 4502</a></p><p><a class="tel" href="tel:+393662082667">+39 366 208 2667</a></p><p style="margin-top:10px"><a class="tel" href="mailto:guerrierosg@gmail.com">guerrierosg@gmail.com</a></p>
+</div>
+<div>
+<h3>Orari</h3>
+<div class="ora"><span>Lunedì - Venerdì</span><b>9-13 &middot; 16-19</b></div>
+<div class="ora"><span>Sabato</span><b>9-13</b></div>
+<div class="ora"><span>Domenica</span><b>Chiuso</b></div>
+</div>
+<div class="mappa">
+<iframe title="Mappa: Via Salvatore Pescatori 67, Avellino" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Via+Salvatore+Pescatori+67+83100+Avellino+AV&amp;z=16&amp;output=embed"></iframe>
+<a class="apri" href="https://www.google.com/maps/search/?api=1&query=Via+Salvatore+Pescatori+67+83100+Avellino+AV" target="_blank" rel="noopener">Apri su Google Maps &#8599;</a>
+</div>
+</div></div></section>
+<footer><div class="w fo"><img src="img/logo-SG-CLIMA-chiaro.svg" alt="SG CLIMA" style="height:34px;width:auto"><span>&copy; 2026 SG CLIMA &middot; Via Salvatore Pescatori, 67, Avellino &middot; <a href="privacy.html" style="color:inherit">Privacy</a></span></div></footer>
+<script>
+// Indirizzo dello script Google (si ottiene alla "Distribuzione" come app web).
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxHXLiT24dLyFNEhL5-XzSPJaD3o-R_OPisO1Jj5j9gmsWlXylP44OX_OvLM3j6KSLD3g/exec';
+const $ = id => document.getElementById(id);
+let giorni = {}, scelta = { data: null, ora: null };
+const attivo = () => /^https:\/\/script\.google\.com\/macros\/s\/[\w-]+\/exec$/.test(SCRIPT_URL);
+async function chiama(url, opz){
+  const c = new AbortController(); const t = setTimeout(() => c.abort(), 25000);
+  try { const r = await fetch(url, Object.assign({ signal: c.signal }, opz || {})); return await r.json(); }
+  finally { clearTimeout(t); }
+}
+const mostra = (id, si) => $(id).classList.toggle('nascosto', !si);
+const dataBella = d => new Date(d + 'T12:00:00').toLocaleDateString('it-IT', { weekday: 'long', day: 'numeric', month: 'long' });
+const dataBreve = d => new Date(d + 'T12:00:00').toLocaleDateString('it-IT', { weekday: 'short', day: 'numeric', month: 'short' });
+function errore(m){ $('errore').textContent = m; mostra('errore', !!m); }
+
+async function caricaGiorni(avviso){
+  scelta = { data: null, ora: null }; mostra('sOra', false); mostra('modulo', false);
+  $('giorni').innerHTML = ''; $('statoGiorni').textContent = 'Cerco i giorni disponibili...'; mostra('statoGiorni', true);
+  try {
+    const r = await chiama(SCRIPT_URL + '?action=giorni');
+    if (!r.ok) throw new Error();
+    giorni = r.giorni; const lista = Object.keys(giorni).sort();
+    if (!lista.length) { $('statoGiorni').textContent = 'Non ci sono giorni liberi al momento. Chiamaci al +39 334 740 4502.'; return; }
+    $('statoGiorni').textContent = avviso || ''; mostra('statoGiorni', !!avviso);
+    $('giorni').innerHTML = lista.map(d => '<button type="button" data-d="' + d + '" aria-pressed="false">' + dataBreve(d) + '</button>').join('');
+  } catch (e) { $('statoGiorni').textContent = 'Non riesco a caricare i giorni. Riprova tra poco o chiamaci.'; }
+}
+$('giorni').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  scelta.data = b.dataset.d; scelta.ora = null;
+  document.querySelectorAll('#giorni button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  $('orari').innerHTML = giorni[scelta.data].map(o => '<button type="button" data-o="' + o + '" aria-pressed="false">' + o + '</button>').join('');
+  mostra('sOra', true); mostra('modulo', false);
+});
+$('orari').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  scelta.ora = b.dataset.o;
+  document.querySelectorAll('#orari button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  $('riepilogo').textContent = dataBella(scelta.data) + ' alle ' + scelta.ora;
+  mostra('modulo', true); $('nome').focus({ preventScroll: true });
+});
+$('modulo').addEventListener('submit', async e => {
+  e.preventDefault(); errore('');
+  const nome = $('nome').value.trim(), email = $('email').value.trim();
+  if (nome.length < 2) return errore('Scrivi il tuo nome.');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return errore("Controlla l'indirizzo email.");
+  if (!$('consenso').checked) return errore('Per prenotare serve il consenso al trattamento dei dati.');
+  const bt = $('invia'); bt.disabled = true; bt.textContent = 'Invio in corso...';
+  try {
+    const r = await chiama(SCRIPT_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({ action: 'prenota', data: scelta.data, ora: scelta.ora, nome: nome, email: email,
+        telefono: $('tel').value.trim(), consenso: $('consenso').checked, sito: $('sito').value }) });
+    if (r.ok) {
+      $('fattoTesto').textContent = r.riepilogo && r.riepilogo.quando ? r.riepilogo.quando + '.' : '';
+      mostra('app', false); mostra('fatto', true); $('fatto').focus();
+    } else {
+      errore(r.messaggio || 'Non è stato possibile prenotare.');
+      if (r.codice === 'occupato') caricaGiorni('Questo orario non è più disponibile. Scegli un altro giorno o orario.');
+    }
+  } catch (err) { errore('Non sono riuscito a inviare la richiesta. Controlla la connessione e riprova.'); }
+  finally { bt.disabled = false; bt.textContent = 'Conferma la prenotazione'; }
+});
+if (attivo()) caricaGiorni(); else { mostra('app', false); mostra('inattivo', true); }
+</script>
+</body>
+</html>
